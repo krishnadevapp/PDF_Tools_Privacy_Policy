@@ -6,123 +6,184 @@
     <title>Privacy Policy - PDF Reader & Tools</title>
     <style>
         :root {
-            --primary-color: #0f172a;
-            --accent-color: #2563eb;
-            --text-primary: #334155;
-            --text-secondary: #64748b;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
+            --primary: #0f172a;
+            --secondary: #334155;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --success-bg: #f0fdf4;
+            --success-text: #15803d;
+            --warning-bg: #fffbeb;
+            --warning-text: #b45309;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--secondary);
+            background: var(--bg);
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 720px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 60px 24px;
+            background: var(--surface);
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.03);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                margin: 40px auto;
+                border-radius: 12px;
+                min-height: auto;
+            }
         }
 
         header {
-            margin-bottom: 60px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 40px;
+            background: var(--primary);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 0 0 0 0;
+        }
+
+        @media (min-width: 768px) {
+            header {
+                border-radius: 12px 12px 0 0;
+            }
         }
 
         h1 {
-            color: var(--primary-color);
-            font-size: 2.25rem;
+            margin: 0 0 16px 0;
+            font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 16px;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.03em;
         }
 
-        .meta {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+        .last-updated {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .content {
+            padding: 40px 40px 60px 40px;
         }
 
         section {
-            background: var(--card-bg);
-            padding: 32px;
-            margin-bottom: 24px;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 48px;
         }
 
         h2 {
-            color: var(--primary-color);
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 16px;
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin: 0 0 20px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
             display: flex;
             align-items: center;
         }
 
-        h2::before {
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 24px;
-            background: var(--accent-color);
-            margin-right: 12px;
-            border-radius: 2px;
-        }
-
         h3 {
-            color: var(--primary-color);
+            color: var(--primary);
             font-size: 1.1rem;
-            margin-top: 24px;
-            margin-bottom: 12px;
+            margin: 24px 0 12px 0;
         }
 
         p {
-            margin-bottom: 16px;
+            margin: 0 0 16px 0;
         }
 
         ul {
-            padding-left: 20px;
-            margin-bottom: 20px;
+            margin: 0 0 24px 0;
+            padding-left: 24px;
         }
 
         li {
             margin-bottom: 8px;
-            color: var(--text-primary);
         }
 
-        .highlight-box {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
+        .card {
+            background: var(--bg);
+            border: 1px solid var(--border);
             border-radius: 8px;
-            padding: 16px;
-            font-size: 0.95rem;
-            color: #1e40af;
-            margin: 20px 0;
+            padding: 24px;
+            margin: 24px 0;
         }
 
-        .permissions-badge {
-            display: inline-block;
-            background: #f1f5f9;
+        .privacy-highlight {
+            background: var(--success-bg);
+            border: 1px solid #bbf7d0;
+            color: var(--success-text);
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .privacy-highlight::before {
+            content: "🛡️";
+            font-size: 1.2em;
+        }
+
+        .permission-item {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .permission-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .tag {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.8rem;
+            background: #e2e8f0;
+            color: #475569;
             padding: 4px 8px;
             border-radius: 4px;
-            font-size: 0.85rem;
-            font-family: monospace;
-            color: #475569;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
+        }
+
+        .tag.critical {
+            background: #fee2e2;
+            color: #b91c1c;
+            border-color: #fecaca;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            color: var(--secondary);
+            font-size: 0.9rem;
         }
 
         a {
-            color: var(--accent-color);
+            color: var(--accent);
             text-decoration: none;
             font-weight: 500;
         }
@@ -131,13 +192,10 @@
             text-decoration: underline;
         }
 
-        footer {
-            margin-top: 60px;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            padding-top: 40px;
+        @media (max-width: 600px) {
+            header { padding: 40px 24px; }
+            .content { padding: 32px 24px; }
+            h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -146,94 +204,126 @@
 <div class="container">
     <header>
         <h1>Privacy Policy</h1>
-        <div class="meta">
-            <strong>App Name:</strong> PDF Reader & Tools<br>
-            <strong>Last Updated:</strong> January 13, 2026
-        </div>
+        <div class="last-updated">Last Revised: January 14, 2026</div>
     </header>
 
-    <section>
-        <h2>Overview</h2>
-        <p>
-            Your privacy is paramount. <strong>PDF Reader & Tools</strong> ("the App") is designed as an <strong>offline-first utility</strong>. This means that unlike many other free tools, we do not upload your sensitive documents to the cloud for processing.
-        </p>
-        <div class="highlight-box">
-            <strong>Zero Data Collection Promise:</strong> We do not collect, store, or share any personal information, usage data, or document contents. All operations are performed locally on your device's processor.
+    <div class="content">
+        
+        <section>
+            <h2>1. Introduction</h2>
+            <p>
+                <strong>PDF Reader & Tools</strong> ("we," "our," or "the App") is committed to protecting your privacy. This policy explains how our application handles your data and outlines your rights.
+            </p>
+            <p>
+                The core philosophy of our App is <strong>Privacy by Design</strong>. We are a utility application that processes your documents directly on your device.
+            </p>
+            
+            <div class="privacy-highlight">
+                <strong>Zero Trace Policy:</strong> We do not collect, upload, process, or store your personal documents, PDF files, or images on any external server. All document processing happens offline on your own device.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Information Collection</h2>
+            <div class="card">
+                <h3>A. Personal Data</h3>
+                <p>We do <strong>not</strong> collect personally identifiable information (PII) such as:</p>
+                <ul>
+                    <li>Names, email addresses, or phone numbers.</li>
+                    <li>Account credentials or login information.</li>
+                    <li>Location data (GPS or IP-based).</li>
+                </ul>
+
+                <h3>B. Usage Data</h3>
+                <p>We do <strong>not</strong> track your usage behavior, screen views, or interaction history within the App. We do not use third-party analytics services like Google Analytics or Firebase Analytics.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Permissions & Device Access</h2>
+            <p>To function as a comprehensive Document Manager, the App requires specific system permissions. We request only what is strictly necessary.</p>
+
+            <div class="permission-item">
+                <div class="permission-header">
+                    <span>Full Storage Access</span>
+                    <span class="tag critical">MANAGE_EXTERNAL_STORAGE</span>
+                </div>
+                <p><strong>Why we need it:</strong> This is the core permission for the App. As a PDF Manager, users expect to find, organize, and edit PDF files located anywhere on their device (Downloads, Documents, Internal Storage).</p>
+                <p><strong>What we do with it:</strong></p>
+                <ul>
+                    <li>Scan device storage to populate the "My Files" list.</li>
+                    <li>Allow you to rename, delete, and move PDF files.</li>
+                    <li>Save edited or converted files back to specific user-chosen folders.</li>
+                </ul>
+            </div>
+
+            <div class="permission-item">
+                <div class="permission-header">
+                    <span>Photo Gallery Access</span>
+                    <span class="tag">READ_MEDIA_IMAGES</span>
+                </div>
+                <p><strong>Why we need it:</strong> Required for the "Image to PDF" feature on Android 13+ devices.</p>
+                <p><strong>What we do with it:</strong> Allows you to select specific images from your gallery to convert them into a single PDF document. We only access images you specifically select.</p>
+            </div>
+
+            <div class="permission-item">
+                <div class="permission-header">
+                    <span>Legacy Storage</span>
+                    <span class="tag">READ/WRITE_EXTERNAL_STORAGE</span>
+                </div>
+                <p><strong>Why we need it:</strong> Required for older devices (Android 10 and below) to read and save files.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Permissions We Do NOT Request</h2>
+            <p>To ensure maximum privacy, our App explicitly avoids requesting sensitive permissions that are not critical to file management:</p>
+            <ul>
+                <li>❌ <strong>No Camera Access:</strong> We do not access your camera hardware. Scanning is done via importing existing images.</li>
+                <li>❌ <strong>No Microphone Access:</strong> We do not record audio.</li>
+                <li>❌ <strong>No Contacts Access:</strong> We do not read your address book.</li>
+                <li>❌ <strong>No Location Access:</strong> We do not track your physical location.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Third-Party Libraries</h2>
+            <p>We utilize industry-standard open-source libraries to power our features. These run locally within the App environment:</p>
+            <ul>
+                <li><strong>iText7 / PDFBox:</strong> Engines for PDF generation and modification.</li>
+                <li><strong>Glide:</strong> For efficient image loading and caching.</li>
+                <li><strong>uCrop:</strong> For image cropping functionality.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Data Security</h2>
+            <p>Since we do not transmit data to the internet, your documents are as secure as your device itself. We recommend keeping your device OS updated and using device-level security (PIN/Biometrics) to protect your local data.</p>
+            <p>There is no "backend database" for this App that can be breached, as we do not maintain one.</p>
+        </section>
+
+        <section>
+            <h2>7. Children's Privacy</h2>
+            <p>Our App is a general audience utility tool. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe your child has provided us with personal information (which is technically impossible given our zero-collection architecture), please contact us.</p>
+        </section>
+
+        <section>
+            <h2>8. Changes to This Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes are effective when they are posted on this page.</p>
+        </section>
+
+        <section>
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions, concerns, or suggestions regarding this Privacy Policy, please contact the developer:</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:contact.krishna.apps@gmail.com">contact.krishna.apps@gmail.com</a>
+            </p>
+        </section>
+
+        <div class="footer">
+            &copy; 2026 PDF Reader & Tools. All rights reserved.
         </div>
-    </section>
-
-    <section>
-        <h2>Permissions & Usage</h2>
-        <p>The App requests only the minimum permissions necessary to function as a document editor and manager.</p>
-
-        <h3>1. Storage Access</h3>
-        <p><strong>Permission:</strong> <span class="permissions-badge">MANAGE_EXTERNAL_STORAGE</span> (All Files Access)</p>
-        <p><strong>Reason:</strong> This permission is critical for the App's core functionality. It allows you to:</p>
-        <ul>
-            <li>Browse and find PDF files stored anywhere on your device.</li>
-            <li>Modify PDF files (Merge, Split, Watermark) and save the results.</li>
-            <li>Organize your library by renaming or deleting unwanted files.</li>
-        </ul>
-
-        <h3>2. Media Access</h3>
-        <p><strong>Permission:</strong> <span class="permissions-badge">READ_MEDIA_IMAGES</span></p>
-        <p><strong>Reason:</strong> Required on Android 13+ to allow you to select images from your gallery to convert them into PDF documents.</p>
-
-        <h3>3. No Other Permissions</h3>
-        <p>To ensure your privacy, the App does <strong>NOT</strong> request or access:</p>
-        <ul>
-            <li><strong>Camera:</strong> We do not access your camera hardware.</li>
-            <li><strong>Location:</strong> We do not track your location.</li>
-            <li><strong>Contacts:</strong> We do not access your contact list.</li>
-            <li><strong>Microphone:</strong> We do not record audio.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Data Handling</h2>
-        <h3>Local Processing</h3>
-        <p>
-            All file operations involved in features such as <em>Image to PDF</em>, <em>Merge PDF</em>, <em>Split PDF</em>, and <em>PDF Compression</em> are executed using the device's own CPU. Your files never leave your device storage.
-        </p>
-
-        <h3>Analytics & Advertising</h3>
-        <p>
-            The App contains <strong>no third-party tracking code</strong>. We do not use Google Analytics, Firebase Analytics, or advertising SDKs (like AdMob). Your usage patterns remain private to you.
-        </p>
-    </section>
-
-    <section>
-        <h2>Third-Party Libraries</h2>
-        <p>
-            We use trusted open-source libraries to provide functionality. These libraries operate locally within the App:
-        </p>
-        <ul>
-            <li><strong>iText7:</strong> For generating and modifying PDF files.</li>
-            <li><strong>Glide:</strong> For efficiently loading images from your storage.</li>
-            <li><strong>uCrop:</strong> For cropping images before conversion.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Children's Privacy</h2>
-        <p>
-            The App does not knowingly address anyone under the age of 13. Since we do not collect any personal data, we hold no information about users of any age.
-        </p>
-    </section>
-
-    <section>
-        <h2>Contact Us</h2>
-        <p>
-            If you have any questions about this Privacy Policy or the App's practices, please contact the developer directly:
-        </p>
-        <p>
-            <strong>Email:</strong> <a href="mailto:contact.krishna.apps@gmail.com">contact.krishna.apps@gmail.com</a>
-        </p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 PDF Reader & Tools. All rights reserved.</p>
-    </footer>
+    </div>
 </div>
 
 </body>
