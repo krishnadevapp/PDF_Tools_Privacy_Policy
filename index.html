@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - PDF Reader & Tools</title>
+    <title>Privacy Policy - PDF Scanner & Editor – Tools</title>
     <style>
         :root {
             --primary: #0f172a;
@@ -37,7 +38,7 @@
             margin: 0 auto;
             background: var(--surface);
             min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0,0,0,0.03);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
         }
 
         @media (min-width: 768px) {
@@ -71,7 +72,7 @@
 
         .last-updated {
             font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -193,138 +194,254 @@
         }
 
         @media (max-width: 600px) {
-            header { padding: 40px 24px; }
-            .content { padding: 32px 24px; }
-            h1 { font-size: 2rem; }
+            header {
+                padding: 32px 20px;
+            }
+
+            .content {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            .permission-item {
+                padding: 16px;
+            }
+
+            .permission-header {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .privacy-highlight {
+                flex-direction: column;
+                padding: 14px;
+                font-size: 0.9rem;
+            }
+
+            .card {
+                padding: 16px;
+            }
+
+            p,
+            li {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+
+            .footer {
+                padding-top: 24px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <header>
-        <h1>Privacy Policy</h1>
-        <div class="last-updated">Last Revised: January 14, 2026</div>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <div class="last-updated">Last Revised: January 27, 2026</div>
+        </header>
 
-    <div class="content">
-        
-        <section>
-            <h2>1. Introduction</h2>
-            <p>
-                <strong>PDF Reader & Tools</strong> ("we," "our," or "the App") is committed to protecting your privacy. This policy explains how our application handles your data and outlines your rights.
-            </p>
-            <p>
-                The core philosophy of our App is <strong>Privacy by Design</strong>. We are a utility application that processes your documents directly on your device.
-            </p>
-            
-            <div class="privacy-highlight">
-                <strong>Zero Trace Policy:</strong> We do not collect, upload, process, or store your personal documents, PDF files, or images on any external server. All document processing happens offline on your own device.
-            </div>
-        </section>
+        <div class="content">
 
-        <section>
-            <h2>2. Information Collection</h2>
-            <div class="card">
-                <h3>A. Personal Data</h3>
-                <p>We do <strong>not</strong> collect personally identifiable information (PII) such as:</p>
+            <section>
+                <h2>1. Introduction</h2>
+                <p>
+                    <strong>PDF Scanner & Editor – Tools</strong> ("we," "our," or "the App") is committed to protecting
+                    your
+                    privacy. This policy explains how our application handles your data and outlines your rights.
+                </p>
+                <p>
+                    The core philosophy of our App is <strong>Privacy by Design</strong>. We are a utility application
+                    that processes your documents directly on your device.
+                </p>
+
+                <div class="privacy-highlight">
+                    <strong>Zero Data Collection Policy:</strong> We do not collect, upload, process, or store your
+                    personal documents, PDF files, or images on any external server. All document processing happens
+                    offline on your own device. We do not display advertisements or use any advertising SDKs.
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Information Collection</h2>
+                <div class="card">
+                    <h3>A. Personal Data</h3>
+                    <p>We do <strong>not</strong> collect personally identifiable information (PII) such as:</p>
+                    <ul>
+                        <li>Names, email addresses, or phone numbers.</li>
+                        <li>Account credentials or login information.</li>
+                        <li>Location data (GPS or IP-based).</li>
+                    </ul>
+
+                    <h3>B. Usage Data & Analytics</h3>
+                    <p>We do <strong>not</strong> track your usage behavior, screen views, or interaction history within
+                        the App. We do not use any third-party analytics services like Google Analytics or Firebase
+                        Analytics.</p>
+
+                    <h3>C. Advertisements</h3>
+                    <p>Our App is <strong>completely ad-free</strong>. We do not integrate any advertising SDKs (such as
+                        AdMob, Facebook Ads, or any other advertising network). Your experience is never interrupted by
+                        advertisements, and no data is shared with advertising networks.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Permissions & Device Access</h2>
+                <p>To function as a comprehensive PDF toolkit, the App requires specific system permissions. We request
+                    only what is strictly necessary for each feature.</p>
+
+                <div class="permission-item">
+                    <div class="permission-header">
+                        <span>Camera Access</span>
+                        <span class="tag critical">CAMERA</span>
+                    </div>
+                    <p><strong>Why we need it:</strong> Required for the Document Scanner feature to capture images of
+                        physical documents directly from your camera.</p>
+                    <p><strong>What we do with it:</strong></p>
+                    <ul>
+                        <li>Capture images for the document scanning functionality.</li>
+                        <li>Images are processed entirely on-device and are never uploaded to any server.</li>
+                        <li>You can choose to deny this permission and still use all other features of the app.</li>
+                    </ul>
+                </div>
+
+                <div class="permission-item">
+                    <div class="permission-header">
+                        <span>Storage Access</span>
+                        <span class="tag">WRITE_EXTERNAL_STORAGE</span>
+                    </div>
+                    <p><strong>Why we need it:</strong> Required on devices running Android 9 (API 29) and below to read
+                        and save PDF files to your device storage.</p>
+                    <p><strong>What we do with it:</strong></p>
+                    <ul>
+                        <li>Read PDF files that you select for editing or viewing.</li>
+                        <li>Save edited or converted PDF files to your chosen location.</li>
+                    </ul>
+                </div>
+
+                <div class="permission-item">
+                    <div class="permission-header">
+                        <span>Internet Access</span>
+                        <span class="tag">INTERNET</span>
+                    </div>
+                    <p><strong>Why we need it:</strong> Required by the Google ML Kit Document Scanner library for
+                        initial model download. This is a one-time download when you first use the scan feature.</p>
+                    <p><strong>What we do with it:</strong></p>
+                    <ul>
+                        <li>Download on-device machine learning models for document edge detection (via Google ML Kit).
+                        </li>
+                        <li>We do <strong>not</strong> upload any of your documents, images, or personal data to the
+                            internet.</li>
+                    </ul>
+                </div>
+
+                <div class="permission-item">
+                    <div class="permission-header">
+                        <span>Photo Gallery Access</span>
+                        <span class="tag">READ_MEDIA_IMAGES</span>
+                    </div>
+                    <p><strong>Why we need it:</strong> Required on Android 13+ devices to access your photo gallery for
+                        the "Image to PDF" conversion feature.</p>
+                    <p><strong>What we do with it:</strong></p>
+                    <ul>
+                        <li>Access images you specifically select to convert into PDF documents.</li>
+                        <li>We only access the images you choose – we do not scan or access your entire gallery.</li>
+                        <li>Selected images are processed entirely on-device and are never uploaded anywhere.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Permissions We Do NOT Request</h2>
+                <p>To ensure maximum privacy, our App explicitly avoids requesting sensitive permissions that are not
+                    critical to PDF management:</p>
                 <ul>
-                    <li>Names, email addresses, or phone numbers.</li>
-                    <li>Account credentials or login information.</li>
-                    <li>Location data (GPS or IP-based).</li>
+                    <li>❌ <strong>No Microphone Access:</strong> We do not record audio.</li>
+                    <li>❌ <strong>No Contacts Access:</strong> We do not read your address book.</li>
+                    <li>❌ <strong>No Location Access:</strong> We do not track your physical location.</li>
+                    <li>❌ <strong>No Phone State Access:</strong> We do not access your call logs or phone number.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Third-Party Libraries & Services</h2>
+                <p>We utilize industry-standard open-source libraries to power our features. These libraries run locally
+                    within the App environment:</p>
+                <ul>
+                    <li><strong>PDFBox-Android:</strong> Apache-licensed library for PDF generation, modification,
+                        merging, splitting, and watermarking. Runs entirely offline.</li>
+                    <li><strong>AndroidPdfViewer:</strong> For rendering and displaying PDF documents within the app.
+                    </li>
+                    <li><strong>Glide:</strong> For efficient image loading and caching within the app.</li>
+                    <li><strong>uCrop:</strong> For image cropping functionality before conversion to PDF.</li>
+                    <li><strong>ZXing:</strong> For QR code generation feature. Runs entirely offline.</li>
+                    <li><strong>CameraX:</strong> Android Jetpack library for camera functionality in the scanning
+                        feature.</li>
                 </ul>
 
-                <h3>B. Usage Data</h3>
-                <p>We do <strong>not</strong> track your usage behavior, screen views, or interaction history within the App. We do not use third-party analytics services like Google Analytics or Firebase Analytics.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>3. Permissions & Device Access</h2>
-            <p>To function as a comprehensive Document Manager, the App requires specific system permissions. We request only what is strictly necessary.</p>
-
-            <div class="permission-item">
-                <div class="permission-header">
-                    <span>Full Storage Access</span>
-                    <span class="tag critical">MANAGE_EXTERNAL_STORAGE</span>
-                </div>
-                <p><strong>Why we need it:</strong> This is the core permission for the App. As a PDF Manager, users expect to find, organize, and edit PDF files located anywhere on their device (Downloads, Documents, Internal Storage).</p>
-                <p><strong>What we do with it:</strong></p>
+                <h3>Google ML Kit Document Scanner</h3>
+                <p>We use Google's ML Kit Document Scanner for enhanced document scanning. This service:</p>
                 <ul>
-                    <li>Scan device storage to populate the "My Files" list.</li>
-                    <li>Allow you to rename, delete, and move PDF files.</li>
-                    <li>Save edited or converted files back to specific user-chosen folders.</li>
+                    <li>Downloads machine learning models to your device (requires Internet permission for initial
+                        download).</li>
+                    <li>Processes all document scanning <strong>on-device</strong> – your documents are never sent to
+                        Google's servers for processing.</li>
+                    <li>For more details, see <a href="https://developers.google.com/ml-kit/vision/doc-scanner"
+                            target="_blank">Google ML Kit Documentation</a>.</li>
                 </ul>
+            </section>
+
+            <section>
+                <h2>6. Data Security</h2>
+                <p>Since we do not transmit your personal data or documents to the internet, your documents are as
+                    secure as your device itself. We recommend keeping your device OS updated and using device-level
+                    security (PIN/Biometrics) to protect your local data.</p>
+                <p>There is no "backend database" or "user accounts" for this App that can be breached, as we do not
+                    maintain any.</p>
+            </section>
+
+            <section>
+                <h2>7. Children's Privacy (COPPA Compliance)</h2>
+                <p>This section is included as a standard legal requirement for all mobile applications. Our App is a
+                    general-purpose productivity tool designed for all users. We do not knowingly collect any personal
+                    information from anyone, including children under 13 years of age. Since this App does not collect,
+                    store, or transmit any personal data whatsoever, compliance with the Children's Online Privacy
+                    Protection Act (COPPA) is inherently satisfied.</p>
+            </section>
+
+            <section>
+                <h2>8. Changes to This Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the
+                    new Privacy Policy on this page and updating the "Last Revised" date. You are advised to review this
+                    Privacy Policy periodically for any changes.</p>
+            </section>
+
+            <section>
+                <h2>9. Contact Us</h2>
+                <p>If you have any questions, concerns, or suggestions regarding this Privacy Policy, please contact the
+                    developer:</p>
+                <p>
+                    <strong>Email:</strong> <a
+                        href="mailto:contact.krishna.apps@gmail.com">contact.krishna.apps@gmail.com</a>
+                </p>
+            </section>
+
+            <div class="footer">
+                &copy; 2026 PDF Scanner & Editor – Tools. All rights reserved.
             </div>
-
-            <div class="permission-item">
-                <div class="permission-header">
-                    <span>Photo Gallery Access</span>
-                    <span class="tag">READ_MEDIA_IMAGES</span>
-                </div>
-                <p><strong>Why we need it:</strong> Required for the "Image to PDF" feature on Android 13+ devices.</p>
-                <p><strong>What we do with it:</strong> Allows you to select specific images from your gallery to convert them into a single PDF document. We only access images you specifically select.</p>
-            </div>
-
-            <div class="permission-item">
-                <div class="permission-header">
-                    <span>Legacy Storage</span>
-                    <span class="tag">READ/WRITE_EXTERNAL_STORAGE</span>
-                </div>
-                <p><strong>Why we need it:</strong> Required for older devices (Android 10 and below) to read and save files.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>4. Permissions We Do NOT Request</h2>
-            <p>To ensure maximum privacy, our App explicitly avoids requesting sensitive permissions that are not critical to file management:</p>
-            <ul>
-                <li>❌ <strong>No Camera Access:</strong> We do not access your camera hardware. Scanning is done via importing existing images.</li>
-                <li>❌ <strong>No Microphone Access:</strong> We do not record audio.</li>
-                <li>❌ <strong>No Contacts Access:</strong> We do not read your address book.</li>
-                <li>❌ <strong>No Location Access:</strong> We do not track your physical location.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>5. Third-Party Libraries</h2>
-            <p>We utilize industry-standard open-source libraries to power our features. These run locally within the App environment:</p>
-            <ul>
-                <li><strong>iText7 / PDFBox:</strong> Engines for PDF generation and modification.</li>
-                <li><strong>Glide:</strong> For efficient image loading and caching.</li>
-                <li><strong>uCrop:</strong> For image cropping functionality.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>6. Data Security</h2>
-            <p>Since we do not transmit data to the internet, your documents are as secure as your device itself. We recommend keeping your device OS updated and using device-level security (PIN/Biometrics) to protect your local data.</p>
-            <p>There is no "backend database" for this App that can be breached, as we do not maintain one.</p>
-        </section>
-
-        <section>
-            <h2>7. Children's Privacy</h2>
-            <p>Our App is a general audience utility tool. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe your child has provided us with personal information (which is technically impossible given our zero-collection architecture), please contact us.</p>
-        </section>
-
-        <section>
-            <h2>8. Changes to This Policy</h2>
-            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes are effective when they are posted on this page.</p>
-        </section>
-
-        <section>
-            <h2>9. Contact Us</h2>
-            <p>If you have any questions, concerns, or suggestions regarding this Privacy Policy, please contact the developer:</p>
-            <p>
-                <strong>Email:</strong> <a href="mailto:contact.krishna.apps@gmail.com">contact.krishna.apps@gmail.com</a>
-            </p>
-        </section>
-
-        <div class="footer">
-            &copy; 2026 PDF Reader & Tools. All rights reserved.
         </div>
     </div>
-</div>
 
 </body>
+
 </html>
